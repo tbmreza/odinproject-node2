@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  
+  a(href=`/new`)
+    | New message
+
+  each message in messages
+    p Message
+    ul
+      each val, index in message
+        li= index + ': ' + val
